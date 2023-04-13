@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/webank.css" />
+  </head>
+  <body>
+    <div class="webank_containe">
+      <div class="webank_containe_head">
+        <div class="webank_containe_head_1">
+          <img src="./assets/webank_head1.png" alt="" />
+        </div>
+        <div class="webank_containe_head_2">
+          <img src="./assets/webank_head2.png" />
+        </div>
+      </div>
+      <div class="jump_items" id="jum_items">
+        <!-- <div class="jump_item">
+          <div class="jump_sign">
+            <img src="./assets/jump_sign_1.png" alt="" />
+          </div>
+          <div class="jump_button">
+            <a href="https://keyike.com/ksr-api/s/4rdt">
+              <img src="./assets/jump_but.png" />
+            </a>
+          </div>
+          <div class="jump_name">
+            <span>天津资方（金城银行）</span>
+          </div>
+        </div>
+        <div class="jump_item">
+          <div class="jump_sign">
+            <img src="./assets/jump_sign_1.png" alt="" />
+          </div>
+          <div class="jump_button">
+            <a
+              href="https://sme.kcbebank.com/marketing/share.html?redirect_uri=https%3A%2F%2Fsme.kcbebank.com%2Fsme%3FinviterUserNo%3DUR111936335865970689%26channelNo%3DWECHAT_H5%26channelCode%3D9921617ac68b%26inviterChannelCode%3D9921617ac68b%26timestamp%3DMuetktZCkTpzdpFD5WqJnEOBMOeVScTx2shleEsC6%252BA%253D%26actCode%3DorgActCode%26referenceOpenId%3DoMHYr5kL-vnmg5EV05N81al69CDM"
+            >
+              <img src="./assets/jump_but.png" />
+            </a>
+          </div>
+          <div class="jump_name">
+            <span>天津资方（金城银行）</span>
+          </div>
+        </div>
+        <div class="jump_item">
+          <div class="jump_sign">
+            <img src="./assets/jump_sign_1.png" alt="" />
+          </div>
+          <div class="jump_button">
+            <a
+              href="https://direct.z-bank.com/portal-loan/xzsdent/#/index?ChannelSeq=10044ZSDZYQY&SubChannelSeq=zsdbwhlyHB0107"
+            >
+              <img src="./assets/jump_but.png" />
+            </a>
+          </div>
+          <div class="jump_name">
+            <span>天津资方（金城银行）</span>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </body>
+  <script>
+    const data = [
+      {
+        url: "https://direct.z-bank.com/portal-loan/xzsdent/#/index?ChannelSeq=10044ZSDZYQY&SubChannelSeq=zsdbwhlyHB0107",
+        name: "天津资方（金城银行）",
+      },
+      {
+        url: "https://direct.z-bank.com/portal-loan/xzsdent/#/index?ChannelSeq=10044ZSDZYQY&SubChannelSeq=zsdbwhlyHB0107",
+        name: "天津资方（金城银行）",
+      },
+      {
+        url: "https://direct.z-bank.com/portal-loan/xzsdent/#/index?ChannelSeq=10044ZSDZYQY&SubChannelSeq=zsdbwhlyHB0107",
+        name: "天津资方（金城银行）",
+      },
+      {
+        url: "https://direct.z-bank.com/portal-loan/xzsdent/#/index?ChannelSeq=10044ZSDZYQY&SubChannelSeq=zsdbwhlyHB0107",
+        name: "四川资方（新网银行)",
+      },
+      {
+        url: "https://direct.z-bank.com/portal-loan/xzsdent/#/index?ChannelSeq=10044ZSDZYQY&SubChannelSeq=zsdbwhlyHB0107",
+        name: "武汉资方（众邦银行)",
+      },
+    ];
+    const container = document.getElementById("jum_items");
+    let innerHtml = "";
+    data.forEach((ele, index) => {
+       let jump_sign = './assets/jump_sign_'+(index+1)+'.png';
+       innerHtml += `
+            <div class="jump_item">
+               <div class="jump_sign">
+                  <img src="${jump_sign}" alt="" />
+                </div>
+                <div class="jump_button">
+                    <a
+                       href="${ele.url}"
+                     >
+                       <img src="./assets/jump_but.png" />
+                    </a>
+                </div>
+                <div class="jump_name">
+                   <span>${ele.name}</span>
+                </div>
+             </div>
+            `;
+    });
+    container.innerHTML = innerHtml
+  </script>
+</html>
